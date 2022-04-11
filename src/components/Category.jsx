@@ -7,32 +7,32 @@ import './category.css';
 export const Category = () => {
     
 
-    const [score, setScore] = useState(76);
-    const [wicket, setWicket] = useState(2);
-    const [over, setOver] = useState(50)
+    const [currentscore, setCurrentscore] = useState(76);
+    const [currentwicket, setCurrenticket] = useState(2);
+    const [currentover, setCurrentover] = useState(50)
 
     const addrun = () => {
-        setScore(score + 1)
+        setCurrentscore(currentscore + 1)
     }
 
     const addrun4=()=>{
-      setScore(score+4)
+        setCurrentscore(currentscore + 4)
     }
 
     const addrun6=()=>{
-        setScore(score+6)
+        setCurrentscore(currentscore + 6)
       }
 
     const addwicket = () => {
-        setWicket(wicket + 1)
-        if(wicket>=10){
+        setCurrenticket(currentwicket + 1)
+        if(currentwicket>=10){
            return(alert("No man are available"))  
             }
         
     }
 
     const addover = () => {
-        setOver(over +0.1)
+        setCurrentover(currentover +0.1)
     }
     return (
         <div className="App">
@@ -40,17 +40,17 @@ export const Category = () => {
 
                 <div>
                     <h1 className="scoreCount">Score</h1>
-                    <h4>{score}</h4>
+                    <h4>{currentscore}</h4>
                 </div>
 
                 <div>
                     <h1 className="scoreCount">Wicket</h1>
-                    <h4>{wicket}</h4>
+                    <h4>{currentwicket}</h4>
                 </div>
 
                 <div>
                     <h1 className="scoreCount">Over</h1>
-                    <h4>{over}</h4>
+                    <h4>{currentover}</h4>
                 </div>
 
             </div>
